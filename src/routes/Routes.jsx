@@ -8,6 +8,7 @@ import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import AddToCart from "../pages/Shared/NavBar/AddToCart";
 import MyCart from "../pages/Shared/NavBar/MyCart";
 import BrandPage from "../pages/Home/BrandPage";
+import UpdateCart from "../pages/Shared/NavBar/UpdateCart";
 
 const routes = createBrowserRouter([
   {
@@ -18,10 +19,16 @@ const routes = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+        loader:()=>fetch('http://localhost:5001/product')
       },
       {
         path: '/brands/:brandName',
         element:<PrivateRoute><BrandPage></BrandPage></PrivateRoute>
+      },
+      {
+        path: '/updatecart/:id',
+        element: <UpdateCart></UpdateCart>,
+        loader: ({ params }) => fetch(` http://localhost:5001/product/${params.id}`)
       },
       {
         path: "/login",
@@ -37,7 +44,8 @@ const routes = createBrowserRouter([
       },
       {
         path: "/mycart",
-        element:<MyCart></MyCart>,
+        element: <MyCart></MyCart>,
+        loader:()=>fetch('http://localhost:5001/product')
       },
       
       
