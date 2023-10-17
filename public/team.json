@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "name": "Mark Hook",
+    "occupation": "Front-End Developer",
+    "image": "https://i.ibb.co/Zc2p3sm/main-home-team-big-1.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Tom Ander",
+    "occupation": "Software Engineer",
+    "image": "https://i.ibb.co/VBpdpww/main-home-team-big-4.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Neil Flynn",
+    "occupation": "Data Analyst",
+    "image": "https://i.ibb.co/f1ZDNLm/main-home-team-big-2.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Una Anston",
+    "occupation": "Full-Stack Developer",
+    "image": "https://i.ibb.co/Nn0PJcZ/main-home-team-big-5.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Scott Brown",
+    "occupation": "DevOps Engineer",
+    "image": "https://i.ibb.co/16B926X/main-home-team-big-3.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Ella Colean",
+    "occupation": "Software Engineer",
+    "image": "https://i.ibb.co/CKSwGWR/main-home-team-big-6.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Zoey Dudek",
+    "occupation": "Mobile App Developer",
+    "image": "https://i.ibb.co/dLVSCVw/main-home-team-big-7.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Ariana Holt",
+    "occupation": "Machine Learning Engineer",
+    "image": "https://i.ibb.co/Q8w6qSF/main-home-team-big-8.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Paul Ferro",
+    "occupation": "Web Developer",
+    "image": "https://i.ibb.co/MGZSbP6/main-home-team-big-9.jpg"
+  }
+]

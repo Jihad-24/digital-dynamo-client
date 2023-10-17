@@ -1,0 +1,50 @@
+[
+    {
+        "_id": 1,
+        "image": "https://i.ibb.co/7npzMg5/Rectangle-2-2.png",
+        "title": "Introduction to C Programming",
+        "description": "Learn the fundamentals of the C programming language and develop a strong foundation in computer programming. This course covers key concepts, syntax, and practical examples to kickstart your programming journey.",
+        "price": 15000,
+        "details": "Discover the world of C programming through our comprehensive course. C is a powerful and widely used programming language known for its efficiency and versatility. This course will equip you with the skills and knowledge needed to become proficient in C programming.\n\nThroughout this course, you will explore the intricacies of C programming, from basic syntax and data types to more advanced topics like pointers and memory management. You will gain a deep understanding of how C code is compiled and executed, making you a more capable programmer.\n\nFurthermore, our course provides hands-on experience with practical examples and coding exercises. You will have the opportunity to apply your newfound knowledge to real-world programming challenges, solidifying your skills and boosting your confidence as a programmer.\n\nWhether you are a beginner looking to start your programming journey or an experienced programmer wanting to master C, this course is tailored to meet your needs. Join us to embark on an exciting journey into the world of C programming and open up numerous opportunities for your career."
+    },
+    {
+        "_id": 2,
+        "image": "https://i.ibb.co/YcJrcjR/Rectangle-2-3.png",
+        "title": "Introduction to Algorithms",
+        "description": "Master the world of algorithms and problem-solving. Explore various algorithmic techniques, data structures, and their applications in solving complex computational problems. A must for any aspiring computer scientist or programmer.",
+        "price": 25000,
+        "details": "Dive deep into the fascinating world of algorithms with our comprehensive course. Algorithms are the building blocks of computer science and play a crucial role in solving a wide range of computational problems. This course is designed to empower you with the knowledge and skills needed to master the art of algorithmic problem-solving.\n\nThroughout this course, you will explore a variety of algorithmic techniques, from classic sorting and searching algorithms to more advanced topics like dynamic programming and graph algorithms. You will gain a solid understanding of data structures, which are the fundamental tools used in designing efficient algorithms.\n\nOur course also emphasizes practical applications, teaching you how to apply these algorithms to solve real-world problems. You will work on hands-on projects and coding challenges, honing your problem-solving skills and becoming a more adept programmer.\n\nWhether you're an aspiring computer scientist or a seasoned programmer looking to enhance your skills, this course offers something valuable for everyone. Join us to embark on a captivating journey into the world of algorithms and elevate your programming capabilities."
+    },
+    {
+        "_id": 3,
+        "image": "https://i.ibb.co/ncs6Ft5/Rectangle-2-4.png",
+        "title": "Introduction to C++ for DSA",
+        "description": "Combine your C++ skills with Data Structures and Algorithms (DSA). This course teaches you how to leverage C++ to implement efficient data structures and solve real-world problems. Enhance your competitive programming skills.",
+        "price": 10000,
+        "details": "Enhance your programming skills by delving into the world of C++ and Data Structures and Algorithms (DSA). This course is designed to provide you with the knowledge and tools needed to become a proficient programmer in C++ and master DSA concepts.\n\nYou'll explore the power of C++ and learn how to leverage it to implement efficient data structures. From linked lists to trees and graphs, you'll understand the intricacies of data structures and how to design them for optimal performance.\n\nThe course goes beyond theory and focuses on practical problem-solving. You'll tackle real-world programming challenges, enhancing your competitive programming skills and preparing you for technical interviews.\n\nC++ is a versatile and high-performance language used in various domains, including game development, system programming, and more. With our course, you'll be well-prepared to excel in any programming context that requires C++ and DSA expertise.\n\nWhether you're a student preparing for coding competitions or a professional aiming to strengthen your programming skills, this course provides a comprehensive foundation for your journey."
+    },
+    {
+        "_id": 4,
+        "image": "https://i.ibb.co/DK1jpkV/Rectangle-2.png",
+        "title": "Introduction to OOP Python",
+        "description": "Dive into Object-Oriented Programming (OOP) with Python. Discover the power of classes, objects, and inheritance in Python, and how they can be used to create modular and maintainable code.",
+        "price": 19000,
+        "details": "Uncover the world of Object-Oriented Programming (OOP) with Python in our comprehensive course. Python is not only known for its simplicity but also its strong support for OOP, making it a popular choice for application development.\n\nIn this course, you'll learn how to create modular and maintainable code by harnessing the power of classes, objects, and inheritance in Python. You'll explore the core principles of OOP and understand how they facilitate software design and development.\n\nThe course combines theory with practical application. You'll work on projects and assignments that allow you to implement OOP concepts in real-world scenarios. Whether you're building web applications, games, or desktop software, OOP skills are invaluable for creating organized and scalable code.\n\nPython's OOP features make it a favorite among developers for projects of all sizes. By completing this course, you'll be well-equipped to design and build software applications that are not only functional but also easy to maintain and extend.\n\nWhether you're a beginner in Python or an experienced developer looking to enhance your OOP skills, our course offers a solid foundation for your journey into the world of Object-Oriented Programming with Python."
+    },
+    {
+        "_id": 5,
+        "image": "https://i.ibb.co/nfVbzPd/Rectangle-2-5.png",
+        "title": "Software Engineering",
+        "description": "Become a skilled software engineer with this comprehensive course. Learn software development methodologies, design patterns, testing, and collaboration in a team. Prepare for a successful career in software engineering.",
+        "price": 23000,
+        "details": "Embark on a transformative journey to become a skilled software engineer with our comprehensive course. Software engineering is a multifaceted field, and our course covers various aspects to ensure you are well-prepared for success.\n\nYou'll dive into software development methodologies, including Agile and Scrum, which are widely used in the industry to manage projects and deliver high-quality software. You'll learn how to plan, execute, and deliver software projects efficiently and on time.\n\nDesign patterns play a crucial role in building scalable and maintainable software systems. You'll gain an in-depth understanding of these patterns and how to apply them to your projects.\n\nTesting is an essential part of software engineering, and our course covers different testing methodologies and tools to ensure the reliability and quality of your code. You'll also explore collaboration and teamwork, an integral part of the software engineering profession.\n\nBy the end of this course, you'll be well-equipped to start a successful career in software engineering. Whether you aspire to work on large-scale projects, develop cutting-edge software, or become a valuable member of a software development team, this course is your key to unlocking a world of opportunities."
+    },
+    {
+        "_id": 6,
+        "image": "https://i.ibb.co/hDF9w9j/Rectangle-2-6.png",
+        "title": "Problem-Solving Part",
+        "description": "Sharpen your problem-solving skills with this advanced course. Tackle complex problems, analyze algorithms, and optimize your solutions. Ideal for competitive programmers and those aiming for technical interviews.",
+        "price": 23000,
+        "details": "Take your problem-solving skills to the next level with our advanced course. Problem-solving is a fundamental skill for computer scientists and programmers, and this course is designed to make you a master of the art.\n\nYou'll tackle complex problems, analyze algorithms, and optimize your solutions. We'll delve into advanced algorithmic techniques, data structures, and optimization strategies to prepare you for even the most challenging problems.\n\nWhether you're a competitive programmer aiming for top ranks in coding competitions or someone preparing for technical interviews at leading tech companies, this course provides the training and practice you need. You'll work on real-world case studies, participate in coding contests, and engage in hands-on problem-solving exercises that will sharpen your skills and boost your confidence.\n\nBy the end of this course, you'll have the knowledge and experience to tackle complex problems with ease and impress interviewers with your problem-solving abilities. Join us on this exciting journey to become a problem-solving expert and stand out in the world of programming."
+    }
+]
