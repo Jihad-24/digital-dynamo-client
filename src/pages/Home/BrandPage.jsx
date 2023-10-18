@@ -23,15 +23,16 @@ const BrandPage = () => {
         fetch('http://localhost:5001/brands')
             .then(res => res.json())
             .then(data => {
-            setSlides(data?.find(item=> item.brand === brandName))
-        })
-    },[brandName])
+                setSlides(data?.find(item => item.brand === brandName))
+            })
+    }, [brandName])
 
 
     return (
         <div>
             <NavBar></NavBar>
-                <div className="carousel w-full h-[80vh] mb-20">
+            {
+                brandProducts.length > 0 && <div className="carousel w-full h-[80vh] mb-20">
                     <div id="slide1" className="carousel-item relative w-full">
                         <img src={slides?.slide1} className="w-full rounded-lg" />
                         <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -54,6 +55,7 @@ const BrandPage = () => {
                         </div>
                     </div>
                 </div>
+            }
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {
                     brandProducts.length > 0 ?
