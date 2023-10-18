@@ -19,11 +19,12 @@ const routes = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader:()=>fetch('http://localhost:5001/product')
+        loader:()=>fetch('http://localhost:5001/brands')
       },
       {
         path: '/brands/:brandName',
-        element:<PrivateRoute><BrandPage></BrandPage></PrivateRoute>
+        element: <PrivateRoute><BrandPage></BrandPage></PrivateRoute>,
+        loader:({ params }) => fetch(` http://localhost:5001/brands/${params.brand}`)
       },
       {
         path: '/updatecart/:id',

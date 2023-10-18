@@ -11,7 +11,7 @@ const MyCart = () => {
     return (
         <div>
             <NavBar></NavBar>
-                <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:mx-10 md:my-10">
+                <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:mx-10 md:my-6">
                     {
                         productData?.map(product => <CartDetails
                             key={product._id}
