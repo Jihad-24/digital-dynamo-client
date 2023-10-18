@@ -1,6 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
 import { useContext } from "react";
-import userDefaultPic from '../../../assets/user.png'
 import { AuthContext } from "../../../providers/AuthProvider";
 import icon from "../../../assets/react.svg"
 import Swal from "sweetalert2";
@@ -71,10 +70,10 @@ const NavBar = () => {
                     <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                         <div className="w-10 rounded-full">
                           
-                                {
-                                    !user ? <img src={userDefaultPic} alt="" />
-                                        :
-                                        <img src={user?.photoURL} alt="" />
+                                {user?.photoURL ? 
+                                    <img src={user?.photoURL} alt="" />
+                                    :
+                                     <img src="https://i.ibb.co/2FngQt8/user.png" alt="" />
                                 }
                            
                         </div>

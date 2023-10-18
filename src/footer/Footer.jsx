@@ -11,7 +11,7 @@ const Footer = () => {
             <div className="footer p-10 bg-[#252525] text-white text-base-content">
                 <aside>
                     <img src={icon} alt="" />
-                    <p>Code Corner Ltd.<br />Code Corner is dedicated to constant learning & knowledge <br /> sharing  in Providing reliable learning enviroment.</p>
+                    <p>DigitalDynamo Ltd.<br />DigitalDynamo is dedicated to constant learning & knowledge <br /> sharing  in Providing reliable Products.</p>
                     <a href="#" className='flex gap-2 items-center py-1  hover:text-sky-500'>
                         <FaPeriscope className='text-xl'></FaPeriscope>
                         <p className='text-[16px]'>457 Mott Street, NY 10013</p>
@@ -27,20 +27,22 @@ const Footer = () => {
                 </aside>
                 <nav>
                     <header className="text-xl text-[#c8c7c7] font-bold py-1  hover:text-sky-500">Services</header>
-                    <a className="link link-hover hover:text-sky-500">Software Engineering</a>
-                    <a className="link link-hover hover:text-sky-500 py-1">Programming</a>
-                    <a className="link link-hover hover:text-sky-500">C++ for DSA</a>
-                    <a className="link link-hover hover:text-sky-500 py-1">Problem-Solving Part</a>
+                    <a className="link link-hover hover:text-sky-500">Apple Brand</a>
+                    <a className="link link-hover hover:text-sky-500 py-1">Samsung Brand</a>
+                    <a className="link link-hover hover:text-sky-500">Sony Brand</a>
+                    <a className="link link-hover hover:text-sky-500 py-1">Xiaomi Brand</a>
+                    <a className="link link-hover hover:text-sky-500 py-1">Goggle Brand</a>
+                    <a className="link link-hover hover:text-sky-500 py-1">Intel® Brand</a>
                 </nav>
                 <nav>
                     <header className="text-xl text-[#c8c7c7] font-bold py-1  hover:text-sky-500">Company</header>
                     <a className="link link-hover hover:text-sky-500">About us</a>
                     <a className="link link-hover hover:text-sky-500 py-1">Contact</a>
                     <a className="link link-hover hover:text-sky-500">Jobs</a>
-                    <a className="link link-hover hover:text-sky-500 py-1">Press kit</a>
+                    <a className="link link-hover hover:text-sky-500 py-1">Privacy Policy</a>
                 </nav>
                 <nav>
-                    <header className="text-xl text-[#c8c7c7] font-bold py-1  hover:text-sky-500">Code Corner</header>
+                    <header className="text-xl text-[#c8c7c7] font-bold py-1  hover:text-sky-500">DigitalDynamo</header>
                     <img src="https://i.ibb.co/MGY1PC3/footer-map-img.png" alt="" />
                 </nav>
             </div>
