@@ -1,10 +1,11 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import NavBar from "./NavBar";
 
 const UpdateCart = () => {
     const loadedProduct = useLoaderData();
     const { _id, details, name, photo, price, rating, type, brand } = loadedProduct;
+    const navigate = useNavigate();
 
 
     const handleUpdateProduct = event => {
@@ -38,7 +39,8 @@ const UpdateCart = () => {
                         text: 'Product Updated Successfully',
                         icon: 'success',
                         confirmButtonText: 'Cool'
-                    })
+                    });
+                    navigate(`/brands/${brand}`);
                 }
 
             })

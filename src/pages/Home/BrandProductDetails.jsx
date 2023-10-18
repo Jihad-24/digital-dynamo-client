@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 
 import { Link } from "react-router-dom";
@@ -16,9 +17,8 @@ const BrandProductDetails = ({ product }) => {
                     <p>Type: {type}</p>
                     <p className="font-medium text-orange-400">Rating: {rating}</p>
                     <p className="font-semibold ">Price: ${price}</p>
-                    <p>Description: {details}</p>
                     <div className="card-actions justify-center">
-                        <button className="btn btn-primary">Details</button>
+                       <Link to={`/productdetails/${_id}`}> <button className="btn btn-primary">Details</button></Link>
                        <Link to={`/updatecart/${_id}`}> <button className="btn btn-primary">Update</button></Link>
                     </div>
                 </div>

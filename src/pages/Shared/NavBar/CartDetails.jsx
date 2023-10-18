@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import Swal from "sweetalert2";
 
@@ -40,15 +41,16 @@ const CartDetails = ({ product, productData, setProductData }) => {
 
     return (
         <div>
-            <div className="card md:h-[550px] bg-base-100 shadow-xl">
-                <figure><img src={photo} alt="Shoes" className="h-48" /></figure>
-                <div className="card-body">
-                    <h2 className="card-title">Name: {name}</h2>
-                    <p className="font-medium text-orange-500">Brand: {brand}</p>
-                    <p>Type: {type}</p>
-                    <p className="font-medium text-orange-400">Rating: {rating}</p>
-                    <p className="font-semibold ">Price: ${price}</p>
-                    <p>Description: {details}</p>
+            <div className="card bg-base-100 shadow-xl">
+                <figure className="px-10 pt-10">
+                    <img src={photo} alt="Shoes" className="h-48" />
+                </figure>
+                <div className="card-body items-center text-center">
+                    <h2 className="card-title">Name : {name}</h2>
+                    <p className="font-bold text-orange-500">Brand : {brand}</p>
+                    <p className="font-medium">Type : {type}</p>
+                    <p className="font-medium text-orange-400">Rating : {rating}</p>
+                    <p className="font-bold btn">Price : ${price}</p>
                     <div className="card-actions justify-center">
                         <button onClick={() => handleDelete(_id)} className="btn btn-primary">Delete Product</button>
                     </div>
