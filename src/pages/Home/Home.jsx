@@ -6,7 +6,7 @@ import StartTrial from "./StartTrial";
 
 const Home = () => {
 
-    const loadedProducts = useLoaderData()
+    const loadedProducts = useLoaderData();
 
 
     return (

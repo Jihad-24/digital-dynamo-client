@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import NavBar from "../Shared/NavBar/NavBar";
 import { useState } from "react";
 import { useEffect } from "react";
+import Swal from "sweetalert2";
 
 const ProductDetails = () => {
 
@@ -21,6 +22,40 @@ const ProductDetails = () => {
             })
     }, [setProductDetail, id])
 
+    const handleaddCart = (e) => {
+        e.preventDefault();
+        const productData = {
+            name: productDetail?.name,
+            type: productDetail?.type,
+            brand: productDetail?.brand,
+            rating: productDetail?.rating,
+            price: productDetail?.price,
+            details: productDetail?.details,
+            photo: productDetail?.photo,
+        }
+
+        fetch('http://localhost:5001/mycart', {
+            method: "POST",
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(productData)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.insertedId) {
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'Product Added Successfully',
+                        icon: 'success',
+                        confirmButtonText: 'Cool'
+                    })
+                }
+
+            })
+    }
+
 
     return (
         <div>
@@ -38,7 +73,9 @@ const ProductDetails = () => {
                         <p className="font-bold btn">Price : ${productDetail?.price}</p>
                         <p className="font-medium">Description : {productDetail?.details}</p>
                         <div className="card-actions">
-                            <button className="btn btn-primary">Add to Cart</button>
+                            <form onSubmit={handleaddCart}>
+                                <input className="btn btn-block btn-primary" type="submit" value="Add to Cart" />
+                            </form>
                         </div>
                     </div>
                 </div>

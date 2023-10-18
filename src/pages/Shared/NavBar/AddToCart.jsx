@@ -3,7 +3,7 @@ import NavBar from "./NavBar";
 
 const AddToCart = () => {
 
-    const handleAddCoffiee = event => {
+    const handleAddProduct = event => {
         event.preventDefault();
         const form = event.target;
         const name = form.name.value;
@@ -45,7 +45,7 @@ const AddToCart = () => {
             <NavBar></NavBar>
             <div className='bg-[#F4F3F0] p-24'>
                 <h1 className='text-center font-extrabold mb-10 text-purple-500 text-4xl'>Add Product</h1>
-                <form onSubmit={handleAddCoffiee}>
+                <form onSubmit={handleAddProduct}>
                     {/* form name and quantity row */}
                     <div className='md:flex gap-6 justify-center mb-8'>
                         <div className="form-control md:w-1/2">

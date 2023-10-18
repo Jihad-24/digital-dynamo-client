@@ -49,9 +49,9 @@ const routes = createBrowserRouter([
         element:<AddToCart></AddToCart>,
       },
       {
-        path: "/mycart",
+        path: "/cart",
         element: <MyCart></MyCart>,
-        loader:()=>fetch('http://localhost:5001/product')
+        loader:()=>fetch('http://localhost:5001/mycart')
       },
       
       

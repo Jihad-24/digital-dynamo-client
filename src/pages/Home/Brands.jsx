@@ -1,11 +1,13 @@
 /* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
 
-const Brands = ({ product}) => {
-    const { brand, image } = product;
+const Brands = ({ product }) => {
+    
+    const { brand, image, } = product;
+
     return (
         <div>
-            <Link to={`/brands/${brand}`}>
+            <Link to={`/brands/${brand}`} product={product}>
             <div className="card h-52 bg-base-100 shadow-xl">
                 <figure className="px-10 pt-10">
                     <img src={image} alt="Shoes" className="rounded-xl w-1/3" />

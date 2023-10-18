@@ -9,6 +9,9 @@ const BrandProductDetails = ({ product }) => {
 
     return (
         <div>
+            <div>
+                
+            </div>
             <div className="card md:h-[550px]  bg-base-100 shadow-xl">
                 <figure><img src={photo} alt="Shoes" className="h-48" /></figure>
                 <div className="card-body">

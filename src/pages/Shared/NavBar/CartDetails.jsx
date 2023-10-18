@@ -7,6 +7,8 @@ const CartDetails = ({ product, productData, setProductData }) => {
 
     const { _id, details, name, photo, price, rating, type, brand } = product;
 
+    console.log(_id);
+
     const handleDelete = (id) => {
         console.log(id);
         Swal.fire({
@@ -19,7 +21,7 @@ const CartDetails = ({ product, productData, setProductData }) => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result?.isConfirmed) {
-                fetch(`http://localhost:5001/product/${id}`, {
+                fetch(`http://localhost:5001/mycart/${id}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())
