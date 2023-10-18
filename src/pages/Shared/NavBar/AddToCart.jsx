@@ -7,14 +7,15 @@ const AddToCart = () => {
         event.preventDefault();
         const form = event.target;
         const name = form.name.value;
-        const price = form.price.value;
         const type = form.type.value;
+        const brand = form.brand.value;
         const rating = form.rating.value;
+        const price = form.price.value;
         const details = form.details.value;
         const photo = form.photo.value;
 
-        const newCoffiee = { name, price, type, rating, details, photo }
-        console.log(newCoffiee);
+        const newProduct = { name, brand, price, type, rating, details, photo }
+        console.log(newProduct);
 
         // send data to the server
         fetch(' http://localhost:5001/product', {
@@ -22,7 +23,7 @@ const AddToCart = () => {
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify(newCoffiee)
+            body: JSON.stringify(newProduct)
         })
             .then(res => res.json())
             .then(data => {
@@ -58,11 +59,11 @@ const AddToCart = () => {
                         </div>
                         <div className="form-control md:w-1/2">
                             <label className="label">
-                                <span className="label-text font-bold">Product Price</span>
+                                <span className="label-text font-bold">Brand Name</span>
                             </label>
                             <label className="input-group">
-                                <span className='font-medium'>Price</span>
-                                <input type="text" name='price' placeholder="Product Price" className="input input-bordered w-full" />
+                                <span className='font-medium'>Brand</span>
+                                <input type="text" name='brand' placeholder="Product Price" className="input input-bordered w-full" />
                             </label>
                         </div>
                     </div>
@@ -88,9 +89,18 @@ const AddToCart = () => {
                         </div>
                     </div>
                     {/* form Category and details row */}
-                    <div className='mb-8'>
+                    <div className='md:flex gap-6 justify-center mb-8'>
 
-                        <div className="form-control w-full">
+                        <div className="form-control md:w-1/2">
+                            <label className="label">
+                                <span className="label-text font-bold">Product Price</span>
+                            </label>
+                            <label className="input-group">
+                                <span className='font-medium'>Price</span>
+                                <input type="text" name='price' placeholder="Enter Product Price" className="input input-bordered w-full" />
+                            </label>
+                        </div>
+                        <div className="form-control md:w-1/2">
                             <label className="label">
                                 <span className="label-text font-bold">Product Details</span>
                             </label>

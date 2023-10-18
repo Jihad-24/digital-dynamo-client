@@ -4,7 +4,7 @@ import Swal from "sweetalert2";
 
 const CartDetails = ({ product, productData, setProductData }) => {
 
-    const { _id, details, name, photo, price, rating, type } = product;
+    const { _id, details, name, photo, price, rating, type, brand } = product;
 
     const handleDelete = (id) => {
         console.log(id);
@@ -40,10 +40,11 @@ const CartDetails = ({ product, productData, setProductData }) => {
 
     return (
         <div>
-            <div className="card bg-base-100 shadow-xl">
+            <div className="card md:h-[600px] bg-base-100 shadow-xl">
                 <figure><img src={photo} alt="Shoes" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">Name: {name}</h2>
+                    <p className="font-medium text-orange-500">Brand: {brand}</p>
                     <p>Type: {type}</p>
                     <p className="font-medium text-orange-400">Rating: {rating}</p>
                     <p className="font-semibold ">Price: ${price}</p>
