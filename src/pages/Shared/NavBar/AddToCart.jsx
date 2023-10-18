@@ -46,7 +46,6 @@ const AddToCart = () => {
             <div className='bg-[#F4F3F0] p-24'>
                 <h1 className='text-center font-extrabold mb-10 text-purple-500 text-4xl'>Add Product</h1>
                 <form onSubmit={handleAddProduct}>
-                    {/* form name and quantity row */}
                     <div className='md:flex gap-6 justify-center mb-8'>
                         <div className="form-control md:w-1/2">
                             <label className="label">
@@ -67,7 +66,6 @@ const AddToCart = () => {
                             </label>
                         </div>
                     </div>
-                    {/* form supplier and taste row */}
                     <div className='md:flex gap-6 justify-center mb-8'>
                         <div className="form-control md:w-1/2">
                             <label className="label">
@@ -88,9 +86,7 @@ const AddToCart = () => {
                             </label>
                         </div>
                     </div>
-                    {/* form Category and details row */}
                     <div className='md:flex gap-6 justify-center mb-8'>
-
                         <div className="form-control md:w-1/2">
                             <label className="label">
                                 <span className="label-text font-bold">Product Price</span>
