@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import NavBar from "../Shared/NavBar/NavBar";
 import { useState } from "react";
 import { useEffect } from "react";
@@ -8,8 +8,7 @@ const ProductDetails = () => {
 
     const [productDetail, setProductDetail] = useState([]);
     const { id } = useParams();
-    console.log(id);
-
+    const navigate = useNavigate();
 
     useEffect(() => {
         fetch('http://localhost:5001/product')
@@ -51,6 +50,7 @@ const ProductDetails = () => {
                         icon: 'success',
                         confirmButtonText: 'Cool'
                     })
+                    navigate(`/brands/${productDetail?.brand}`)
                 }
 
             })

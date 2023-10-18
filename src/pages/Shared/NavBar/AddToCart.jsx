@@ -18,7 +18,7 @@ const AddToCart = () => {
         console.log(newProduct);
 
         // send data to the server
-        fetch(' http://localhost:5001/product', {
+        fetch(' http://localhost:5001/mycart', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'

@@ -12,7 +12,7 @@ const BrandProductDetails = ({ product }) => {
             <div>
                 
             </div>
-            <div className="card md:h-[550px]  bg-base-100 shadow-xl">
+            <div className="card md:h-[500px]  bg-base-100 shadow-xl">
                 <figure><img src={photo} alt="Shoes" className="h-48" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">Name: {name}</h2>

@@ -38,7 +38,7 @@ const NavBar = () => {
             !user && <li className="font-semibold"><NavLink to={"/register"}>Register</NavLink></li>
         }
         {user && <>
-            <li className="font-semibold"><NavLink to="/addtocart">Add Cart</NavLink></li>
+            <li className="font-semibold"><NavLink to="/addtocart">Add Product</NavLink></li>
             <li className="font-semibold"><NavLink to="/cart">My Cart</NavLink></li>
             <li className="font-semibold"><NavLink to="/dashboard">Dashboard</NavLink></li>
         </>}
