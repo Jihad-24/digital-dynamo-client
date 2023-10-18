@@ -40,8 +40,8 @@ const CartDetails = ({ product, productData, setProductData }) => {
 
     return (
         <div>
-            <div className="card md:h-[600px] bg-base-100 shadow-xl">
-                <figure><img src={photo} alt="Shoes" /></figure>
+            <div className="card md:h-[550px] bg-base-100 shadow-xl">
+                <figure><img src={photo} alt="Shoes" className="h-48" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">Name: {name}</h2>
                     <p className="font-medium text-orange-500">Brand: {brand}</p>

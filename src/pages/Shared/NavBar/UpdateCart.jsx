@@ -4,6 +4,8 @@ import NavBar from "./NavBar";
 
 const UpdateCart = () => {
     const loadedProduct = useLoaderData();
+    const { _id, details, name, photo, price, rating, type, brand } = loadedProduct;
+
 
     const handleUpdateProduct = event => {
         event.preventDefault();
@@ -46,7 +48,7 @@ const UpdateCart = () => {
         <div>
             <NavBar></NavBar>
             <div className='bg-[#F4F3F0] p-24'>
-                <h1 className='text-center font-extrabold mb-10 text-purple-500 text-4xl'>Add Product</h1>
+                <h1 className='text-center font-extrabold mb-10 text-purple-500 text-4xl'>Update Existing Product</h1>
                 <form onSubmit={handleUpdateProduct}>
                     {/* form name and quantity row */}
                     <div className='md:flex gap-6 justify-center mb-8'>
@@ -56,7 +58,7 @@ const UpdateCart = () => {
                             </label>
                             <label className="input-group">
                                 <span className='font-medium'>Name</span>
-                                <input type="text" name='name' placeholder="Enter product name" className="input input-bordered w-full" />
+                                <input type="text" name='name' defaultValue={name} placeholder="Enter product name" className="input input-bordered w-full" />
                             </label>
                         </div>
                         <div className="form-control md:w-1/2">
@@ -65,7 +67,7 @@ const UpdateCart = () => {
                             </label>
                             <label className="input-group">
                                 <span className='font-medium'>Brand</span>
-                                <input type="text" name='brand' placeholder="Product Price" className="input input-bordered w-full" />
+                                <input type="text" name='brand' defaultValue={brand} placeholder="Product Price" className="input input-bordered w-full" />
                             </label>
                         </div>
                     </div>
@@ -77,7 +79,7 @@ const UpdateCart = () => {
                             </label>
                             <label className="input-group">
                                 <span className='font-medium'>Type</span>
-                                <input type="text" name='type' placeholder="Enter Product Type" className="input input-bordered w-full" />
+                                <input type="text" name='type' defaultValue={type} placeholder="Enter Product Type" className="input input-bordered w-full" />
                             </label>
                         </div>
                         <div className="form-control md:w-1/2">
@@ -86,7 +88,7 @@ const UpdateCart = () => {
                             </label>
                             <label className="input-group">
                                 <span className='font-medium'>Rating</span>
-                                <input type="text" name='rating' placeholder="How is our product" className="input input-bordered w-full" />
+                                <input type="text" name='rating' defaultValue={rating} placeholder="How is our product" className="input input-bordered w-full" />
                             </label>
                         </div>
                     </div>
@@ -99,7 +101,7 @@ const UpdateCart = () => {
                             </label>
                             <label className="input-group">
                                 <span className='font-medium'>Price</span>
-                                <input type="text" name='price' placeholder="Enter Product Price" className="input input-bordered w-full" />
+                                <input type="text" name='price' defaultValue={price} placeholder="Enter Product Price" className="input input-bordered w-full" />
                             </label>
                         </div>
                         <div className="form-control md:w-1/2">
@@ -108,7 +110,7 @@ const UpdateCart = () => {
                             </label>
                             <label className="input-group">
                                 <span className='font-medium'>Details</span>
-                                <input type="text" name='details' placeholder="Enter Short description" className="input input-bordered w-full" />
+                                <input type="text" name='details' defaultValue={details} placeholder="Enter Short description" className="input input-bordered w-full" />
                             </label>
                         </div>
 
@@ -121,11 +123,11 @@ const UpdateCart = () => {
                             </label>
                             <label className="input-group">
                                 <span className='font-medium'>Photo</span>
-                                <input type="text" name='photo' placeholder="Enter photo URL" className="input input-bordered w-full" />
+                                <input type="text" name='photo' defaultValue={photo} placeholder="Enter photo URL" className="input input-bordered w-full" />
                             </label>
                         </div>
                     </div>
-                    <input className='btn btn-block bg-[#D2B48C]' type="submit" value="Add Product" />
+                    <input className='btn btn-block bg-[#D2B48C]' type="submit" value="Update Product" />
                 </form>
 
             </div>
