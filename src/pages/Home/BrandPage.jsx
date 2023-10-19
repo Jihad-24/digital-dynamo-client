@@ -1,5 +1,4 @@
 import { useParams } from "react-router-dom";
-import NavBar from "../Shared/NavBar/NavBar";
 import { useState } from "react";
 import { useEffect } from "react";
 import BrandProductDetails from "./BrandProductDetails";
@@ -9,20 +8,28 @@ const BrandPage = () => {
     const { brandName } = useParams();
     const [brandProducts, setBrandProducts] = useState([]);
     const [slides, setSlides] = useState([]);
+    const [isLoading, setIsLoading] = useState(false);
 
     useEffect(() => {
-        fetch('http://localhost:5001/product')
+        setIsLoading(true)
+        fetch('https://digital-dynamo-j.vercel.app/product')
             .then(res => res.json())
             .then(data => {
+                console.log(data)
                 const filterProducts = data.filter((product) => product.brand === brandName);
+                console.log(filterProducts)
                 setBrandProducts(filterProducts)
+                setIsLoading(false)
             })
     }, [brandName])
 
+
     useEffect(() => {
-        fetch('http://localhost:5001/brands')
+
+        fetch('https://digital-dynamo-j.vercel.app/brands')
             .then(res => res.json())
             .then(data => {
+                console.log(data)
                 setSlides(data?.find(item => item.brand === brandName))
             })
     }, [brandName])
@@ -30,7 +37,6 @@ const BrandPage = () => {
 
     return (
         <div>
-            <NavBar></NavBar>
             {
                 brandProducts.length > 0 && <div className="carousel w-full h-[80vh] mb-20">
                     <div id="slide1" className="carousel-item relative w-full">
@@ -57,7 +63,26 @@ const BrandPage = () => {
                 </div>
             }
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
                 {
+                    isLoading ?
+                        <div>Loading...</div>
+                        :
+                        (
+                            brandProducts.length > 0 ?
+                                brandProducts?.map((product) =>
+                                    <BrandProductDetails product={product} key={product._id} />
+                                )
+                                :
+                                <div className="text-center mx-auto md:w-[700px] lg:w-[1100px]">
+                                    <h1 className="font-bold loading-10  text-3xl">
+                                        <span className="font-extrabold text-red-600"> Oops, </span> <br />
+                                        it seems like there are currently no products <br /> available for this brand. Please check back <br /> later for updates or explore our other  <br />  brands and products.
+                                    </h1>
+                                </div>
+                        )
+                }
+                {/* {
                     brandProducts.length > 0 ?
                         brandProducts?.map((product) =>
                             <BrandProductDetails product={product} key={product._id} />
@@ -69,7 +94,7 @@ const BrandPage = () => {
                                 it seems like there are currently no products <br /> available for this brand. Please check back <br /> later for updates or explore our other  <br />  brands and products.
                             </h1>
                         </div>
-                }
+                } */}
 
             </div>
         </div>

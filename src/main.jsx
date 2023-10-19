@@ -6,8 +6,7 @@ import {
 } from "react-router-dom";
 import routes from './routes/Routes';
 import AuthProvider from './providers/AuthProvider';
-
-
+// import "../"
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(

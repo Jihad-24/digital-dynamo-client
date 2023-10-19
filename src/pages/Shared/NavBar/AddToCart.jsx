@@ -1,5 +1,4 @@
 import Swal from "sweetalert2";
-import NavBar from "./NavBar";
 
 const AddToCart = () => {
 
@@ -18,7 +17,7 @@ const AddToCart = () => {
         console.log(newProduct);
 
         // send data to the server
-        fetch(' http://localhost:5001/mycart', {
+        fetch(' https://digital-dynamo-j.vercel.app/mycart', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'
@@ -42,7 +41,6 @@ const AddToCart = () => {
     }
     return (
         <div>
-            <NavBar></NavBar>
             <div className='bg-[#F4F3F0] p-24'>
                 <h1 className='text-center font-extrabold mb-10 text-purple-500 text-4xl'>Add Product</h1>
                 <form onSubmit={handleAddProduct}>

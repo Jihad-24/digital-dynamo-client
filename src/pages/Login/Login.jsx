@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import NavBar from "../Shared/NavBar/NavBar";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
@@ -53,7 +52,7 @@ const Login = () => {
                 const displayName = result?.user?.displayName;
                 const user = { email, displayName }
 
-                fetch('http://localhost:5001/user', {
+                fetch('https://digital-dynamo-j.vercel.app/user', {
                     method: "POST",
                     headers: {
                         'content-type': 'application/json'
@@ -87,7 +86,6 @@ const Login = () => {
 
     return (
         <div>
-            <NavBar></NavBar>
             <div >
                 <h1 className="text-4xl mt-10 font-bold text-center" data-aos="fade-down">Login your account!</h1>
                 <form

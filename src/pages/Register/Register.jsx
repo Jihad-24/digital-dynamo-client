@@ -1,5 +1,4 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import NavBar from "../Shared/NavBar/NavBar";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
@@ -52,7 +51,7 @@ const Register = () => {
                 console.log(result.user);
                 setSuccess('User Created Successfully')
                 const user = { name, email, password };
-                fetch('http://localhost:5001/user', {
+                fetch('https://digital-dynamo-j.vercel.app/user', {
                     method: "POST",
                     headers: {
                         'content-type': 'application/json'
@@ -92,7 +91,7 @@ const Register = () => {
                 const displayName = result?.user?.displayName;
                 const user = { email, displayName }
 
-                fetch('http://localhost:5001/user', {
+                fetch('https://digital-dynamo-j.vercel.app/user', {
                     method: "POST",
                     headers: {
                         'content-type': 'application/json'
@@ -126,7 +125,6 @@ const Register = () => {
 
     return (
         <div className="mb-16">
-            <NavBar></NavBar>
             <div className="">
                 <h1 className="text-4xl mt-10 font-bold text-center" data-aos="fade-down">Register your account!</h1>
                 <form

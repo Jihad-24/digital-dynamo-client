@@ -21,7 +21,7 @@ const CartDetails = ({ product, productData, setProductData }) => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result?.isConfirmed) {
-                fetch(`http://localhost:5001/mycart/${id}`, {
+                fetch(`https://digital-dynamo-j.vercel.app/mycart/${id}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())

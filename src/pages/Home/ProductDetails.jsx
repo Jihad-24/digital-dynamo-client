@@ -1,5 +1,4 @@
 import { useNavigate, useParams } from "react-router-dom";
-import NavBar from "../Shared/NavBar/NavBar";
 import { useState } from "react";
 import { useEffect } from "react";
 import Swal from "sweetalert2";
@@ -11,7 +10,7 @@ const ProductDetails = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch('http://localhost:5001/product')
+        fetch('https://digital-dynamo-j.vercel.app/product')
             .then(res => res.json())
             .then(data => {
                 setProductDetail(data.find((item) => item._id === id));
@@ -33,7 +32,7 @@ const ProductDetails = () => {
             photo: productDetail?.photo,
         }
 
-        fetch('http://localhost:5001/mycart', {
+        fetch('https://digital-dynamo-j.vercel.app/mycart', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'
@@ -59,7 +58,6 @@ const ProductDetails = () => {
 
     return (
         <div>
-            <NavBar></NavBar>
             <div>
                 <div className="card  bg-base-100 shadow-xl">
                     <figure className="px-10 pt-10">

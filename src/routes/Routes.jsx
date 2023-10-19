@@ -15,22 +15,21 @@ const routes = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
-    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
         element: <Home></Home>,
-        loader:()=>fetch('http://localhost:5001/brands')
+        loader: () => fetch('https://digital-dynamo-j.vercel.app/brands')
       },
       {
         path: '/brands/:brandName',
         element: <PrivateRoute><BrandPage></BrandPage></PrivateRoute>,
-        loader:({ params }) => fetch(` http://localhost:5001/brands/${params.brand}`)
+        loader: ({ params }) => fetch(` https://digital-dynamo-j.vercel.app/brands/${params.brand}`)
       },
       {
         path: '/updatecart/:id',
         element: <UpdateCart></UpdateCart>,
-        loader: ({ params }) => fetch(` http://localhost:5001/product/${params.id}`)
+        loader: ({ params }) => fetch(` https://digital-dynamo-j.vercel.app/product/${params.id}`)
       },
       {
         path: "/productdetails/:id",
@@ -46,15 +45,19 @@ const routes = createBrowserRouter([
       },
       {
         path: '/addtocart',
-        element:<AddToCart></AddToCart>,
+        element: <AddToCart></AddToCart>,
       },
       {
         path: "/cart",
         element: <MyCart></MyCart>,
-        loader:()=>fetch('http://localhost:5001/mycart')
+        loader: () => fetch('https://digital-dynamo-j.vercel.app/mycart')
       },
-      
-      
+      {
+        path: "*",
+        element: <ErrorPage />
+      }
+
+
 
     ]
   },

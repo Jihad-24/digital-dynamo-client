@@ -1,6 +1,5 @@
 import { useLoaderData, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
-import NavBar from "./NavBar";
 
 const UpdateCart = () => {
     const loadedProduct = useLoaderData();
@@ -23,7 +22,7 @@ const UpdateCart = () => {
         console.log(updatdProduct);
 
         // send data to the server
-        fetch(` http://localhost:5001/product/${_id}`, {
+        fetch(` https://digital-dynamo-j.vercel.app/product/${_id}`, {
             method: "PUT",
             headers: {
                 'content-type': 'application/json'
@@ -48,7 +47,6 @@ const UpdateCart = () => {
 
     return (
         <div>
-            <NavBar></NavBar>
             <div className='bg-[#F4F3F0] p-24'>
                 <h1 className='text-center font-extrabold mb-10 text-purple-500 text-4xl'>Update Existing Product</h1>
                 <form onSubmit={handleUpdateProduct}>

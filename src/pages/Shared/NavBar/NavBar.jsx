@@ -6,7 +6,7 @@ import Swal from "sweetalert2";
 
 const NavBar = () => {
 
-    const { user, logOut } = useContext(AuthContext);
+    const { isDark, setIsDark, user, logOut } = useContext(AuthContext);
     // console.log(user.displayName);
 
     const handleSignOut = () => {
@@ -42,6 +42,11 @@ const NavBar = () => {
             <li className="font-semibold"><NavLink to="/dashboard">Dashboard</NavLink></li>
         </>}
     </>
+
+    const handleTheam = () => {
+        setIsDark(!isDark)
+    }
+
     return (
         <div>
             <div className="navbar bg-base-100 py-10">
@@ -66,16 +71,19 @@ const NavBar = () => {
                         {navLinks}
                     </ul>
                 </div>
+                <div>
+                    <div onClick={handleTheam} className="btn">{isDark ? "light" : "dark"}</div>
+                </div>
                 <div className="navbar-end">
                     <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                         <div className="w-10 rounded-full">
-                          
-                                {user?.photoURL ? 
-                                    <img src={user?.photoURL} alt="" />
-                                    :
-                                     <img src="https://i.ibb.co/2FngQt8/user.png" alt="" />
-                                }
-                           
+
+                            {user?.photoURL ?
+                                <img src={user?.photoURL} alt="" />
+                                :
+                                <img src="https://i.ibb.co/2FngQt8/user.png" alt="" />
+                            }
+
                         </div>
 
                     </label>

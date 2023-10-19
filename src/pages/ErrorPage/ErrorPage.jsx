@@ -2,12 +2,10 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import { Link } from 'react-router-dom';
-import NavBar from '../Shared/NavBar/NavBar';
 
 const ErrorPage = () => {
     return (
         <div className="">
-            <NavBar></NavBar>
             <div className=' mx-auto mt-20'>
             <div className="text-center l leading-9 font-medium">
             <h1 className='text-3xl font-semibold'>404 - Page Not Found</h1>

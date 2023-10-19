@@ -1,14 +1,14 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 
-const StartTrial = () => {
+const ContactUs = () => {
     return (
         <div>
             <div className="hero ">
                 <div className="hero-content gap-5 flex-col md:flex-row-reverse">
                     <div className="" data-aos="fade-down">
-                    <img src="https://i.ibb.co/fGfTMZB/monitor-1307227-1280.jpg" className="md:max-w-md lg:max-w-xl h-full md:h-[530px] rounded-lg shadow-2xl " />
-                   </div>
+                        <img src="https://i.ibb.co/fGfTMZB/monitor-1307227-1280.jpg" className="md:max-w-md lg:max-w-xl h-full md:h-[530px] rounded-lg shadow-2xl " />
+                    </div>
                     <div className="flex-col " data-aos="fade-right">
                         <div className='flex gap-3 mb-10 md:mb-3 lg:mb-11'>
                             <img className='w-16 h-16' src="https://i.ibb.co/vq308fn/bill-mobile-payment.png" alt="" />
@@ -45,4 +45,4 @@ const StartTrial = () => {
     );
 };
 
-export default StartTrial;
+export default ContactUs;

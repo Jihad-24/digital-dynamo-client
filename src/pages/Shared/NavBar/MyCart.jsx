@@ -1,4 +1,3 @@
-import NavBar from "./NavBar";
 import CartDetails from "./CartDetails";
 import { useLoaderData } from "react-router-dom";
 import { useState } from "react";
@@ -10,7 +9,6 @@ const MyCart = () => {
 
     return (
         <div>
-            <NavBar></NavBar>
             <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:mx-10 md:my-6">
                 {
                     productData.length > 0 ?
