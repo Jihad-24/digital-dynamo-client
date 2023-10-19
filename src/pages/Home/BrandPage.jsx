@@ -2,8 +2,12 @@ import { useParams } from "react-router-dom";
 import { useState } from "react";
 import { useEffect } from "react";
 import BrandProductDetails from "./BrandProductDetails";
+import { useContext } from "react";
+import { AuthContext } from "../../providers/AuthProvider";
 
 const BrandPage = () => {
+    const { isDark } = useContext(AuthContext);
+
 
     const { brandName } = useParams();
     const [brandProducts, setBrandProducts] = useState([]);
@@ -74,7 +78,7 @@ const BrandPage = () => {
                                     <BrandProductDetails product={product} key={product._id} />
                                 )
                                 :
-                                <div className="text-center mx-auto md:w-[700px] lg:w-[1100px]">
+                                <div className={`text-center mx-auto md:w-[700px] lg:w-[1100px] ${isDark && "text-white"}`}>
                                     <h1 className="font-bold loading-10  text-3xl">
                                         <span className="font-extrabold text-red-600"> Oops, </span> <br />
                                         it seems like there are currently no products <br /> available for this brand. Please check back <br /> later for updates or explore our other  <br />  brands and products.

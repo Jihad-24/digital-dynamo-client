@@ -36,14 +36,6 @@ const routes = createBrowserRouter([
         element: <ProductDetails></ProductDetails>,
       },
       {
-        path: "/login",
-        element: <Login></Login>,
-      },
-      {
-        path: "/register",
-        element: <Register></Register>,
-      },
-      {
         path: '/addtocart',
         element: <AddToCart></AddToCart>,
       },
@@ -56,10 +48,15 @@ const routes = createBrowserRouter([
         path: "*",
         element: <ErrorPage />
       }
-
-
-
     ]
+  },
+  {
+    path: "/login",
+    element: <Login></Login>,
+  },
+  {
+    path: "/register",
+    element: <Register></Register>,
   },
 ]);
 

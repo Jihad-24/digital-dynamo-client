@@ -7,15 +7,14 @@ import { AuthContext } from "../providers/AuthProvider";
 const Root = () => {
     const { isDark } = useContext(AuthContext);
     return (
-        <div>
-             <NavBar />
-            <div className={`${isDark ? "bg-black" : "bg-white"}`}>
-           
-            <div className={`max-w-6xl mx-auto mb-32`}>
-                <Outlet></Outlet>
+        <div className={` ${isDark ? "bg-black text-white" : "bg-white text-black"}`}>
+             <div className='max-w-6xl my-4 mx-auto'>
+                <NavBar />
             </div>
-            <Footer></Footer>
-        </div>
+                <div className='max-w-6xl mx-auto  mb-32'>
+                    <Outlet></Outlet>
+                </div>
+                <Footer></Footer>
         </div>
     );
 };

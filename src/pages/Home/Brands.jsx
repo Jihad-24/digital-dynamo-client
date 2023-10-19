@@ -1,14 +1,17 @@
 /* eslint-disable react/prop-types */
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../providers/AuthProvider";
 
 const Brands = ({ product }) => {
-    
+    const { isDark } = useContext(AuthContext);
+
     const { brand, image, } = product;
 
     return (
         <div>
             <Link to={`/brands/${brand}`} product={product}>
-            <div className="card h-52 bg-base-100 shadow-xl">
+            <div className={`card h-52 bg-base-100 shadow-xl ${isDark && "text-black"}`}>
                 <figure className="px-10 pt-10">
                     <img src={image} alt="Shoes" className="rounded-xl w-1/3" />
                 </figure>

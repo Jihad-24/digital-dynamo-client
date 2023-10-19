@@ -4,10 +4,11 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import Swal from "sweetalert2";
+import NavBar from "../Shared/NavBar/NavBar";
 
 const Login = () => {
 
-    const { signIn, signInGoogle } = useContext(AuthContext);
+    const { isDark, signIn, signInGoogle } = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
     const [loginError, setLoginError] = useState('');
@@ -85,18 +86,20 @@ const Login = () => {
     console.log(location);
 
     return (
-        <div>
+        <div className={`pb-24 ${isDark ? "bg-black text-white" : "bg-white text-black"}`}>
+            <NavBar></NavBar>
             <div >
                 <h1 className="text-4xl mt-10 font-bold text-center" data-aos="fade-down">Login your account!</h1>
                 <form
                     onSubmit={handleLogin}
-                    className="card-body md:w-3/4 lg:w-1/2 mx-auto">
+                    
+                    className={`card-body md:w-3/4 lg:w-1/2 mx-auto ${isDark && "text-black"}`}>
                     {
                         loginError && <p className="text-red-700">{loginError}</p>
                     }
                     <div className="form-control " data-aos="fade-right">
                         <label className="label">
-                            <span className="label-text">Email Address</span>
+                            <span className={`label-text ${isDark && "text-white"}`}>Email Address</span>
                         </label>
                         <input
                             type="email"
@@ -106,7 +109,7 @@ const Login = () => {
                     </div>
                     <div className="form-control relative" data-aos="fade-left">
                         <label className="label">
-                            <span className="label-text">Password</span>
+                            <span className={`label-text ${isDark && "text-white"}`}>Password</span>
                         </label>
                         <input
                             type={showPassword ? "text" : "password"}
@@ -121,21 +124,18 @@ const Login = () => {
                         <label className="label">
                             <a
                                 href="#"
-                                className="label-text-alt link link-hover">
+                                className={`label-text-alt link link-hover ${isDark && "text-white"}`}>
                                 Forgot password?</a>
                         </label>
                     </div>
                     <div className="form-control mt-4" >
 
                         <button className="btn btn-primary">Login</button>
+                        <button onClick={handleGoogleSignIn} className="btn btn-neutral mt-6">Login With Google</button>
 
                     </div>
 
                 </form>
-                <div className="card-body md:w-3/4 lg:w-1/2 mx-auto" >
-
-                    <button onClick={handleGoogleSignIn} className="btn btn-neutral">Login With Google</button>
-                </div>
                 <p className="text-center text-[#706F6F] font-medium">Don’t Have An Account ?
                     <Link to={"/register"} className="text-[#F75B5F] font-bold"> Register</Link> </p>
             </div>

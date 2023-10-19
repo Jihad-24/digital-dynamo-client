@@ -3,11 +3,12 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import Swal from "sweetalert2";
+import NavBar from "../Shared/NavBar/NavBar";
 
 
 const Register = () => {
 
-    const { createUser, signInGoogle } = useContext(AuthContext);
+    const {isDark, createUser, signInGoogle } = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
 
@@ -124,12 +125,14 @@ const Register = () => {
     console.log(navigate);
 
     return (
-        <div className="mb-16">
+        <div className={`pb-24 ${isDark ? "bg-black text-white" : "bg-white text-black"}`} >
+            <NavBar></NavBar>
             <div className="">
                 <h1 className="text-4xl mt-10 font-bold text-center" data-aos="fade-down">Register your account!</h1>
                 <form
                     onSubmit={handleRegister}
-                    className="card-body md:w-3/4 lg:w-1/2 mx-auto">
+                    className={`card-body md:w-3/4 lg:w-1/2 mx-auto ${isDark && "text-black"}`}
+                    >
                     {
                         registerError && <p className="text-red-700">{registerError}</p>
                     }
@@ -138,7 +141,7 @@ const Register = () => {
                     }
                     <div className="form-control " data-aos="fade-left">
                         <label className="label">
-                            <span className="label-text">Your Name</span>
+                            <span className={`label-text ${isDark && "text-white"}`}>Your Name</span>
                         </label>
                         <input
                             type="text"
@@ -148,7 +151,7 @@ const Register = () => {
                     </div>
                     <div className="form-control " data-aos="fade-right">
                         <label className="label">
-                            <span className="label-text">Email Address</span>
+                            <span className={`label-text ${isDark && "text-white"}`}>Email Address</span>
                         </label>
                         <input
                             type="email"
@@ -158,7 +161,7 @@ const Register = () => {
                     </div>
                     <div className="form-control relative" data-aos="fade-left">
                         <label className="label">
-                            <span className="label-text">Password</span>
+                            <span className={`label-text ${isDark && "text-white"}`}>Password</span>
                         </label>
                         <input
                             type={showPassword ? "text" : "password"}
@@ -173,17 +176,14 @@ const Register = () => {
                     </div>
                     <div className="flex" >
                         <input type="checkbox" name="terms" id="terms" />
-                        <label htmlFor="terms"><a href="#">Acceept our Terms and Condition</a></label>
+                        <label htmlFor="terms"><a href="#" className={`${isDark && "text-white"}`}>Acceept our Terms and Condition</a></label>
                     </div>
                     <div className="form-control mt-4">
                         <button className="btn btn-primary">Register</button>
+                        <button onClick={handleGoogleSignIn} className="btn btn-neutral mt-6">Login With Google</button>
                     </div>
 
                 </form>
-                <div className="card-body md:w-3/4 lg:w-1/2 mx-auto" data-aos="fade-up">
-
-                    <button onClick={handleGoogleSignIn} className="btn btn-neutral">Login With Google</button>
-                </div>
                 <p className="text-center text-[#706F6F] font-medium">Already Have An Account ?
                     <Link to={"/login"} className="text-[#F75B5F] font-bold">  Login Now!</Link> </p>
 

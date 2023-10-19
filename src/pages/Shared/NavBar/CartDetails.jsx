@@ -1,9 +1,13 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import Swal from "sweetalert2";
+import { AuthContext } from "../../../providers/AuthProvider";
+import { useContext } from "react";
 
 
 const CartDetails = ({ product, productData, setProductData }) => {
+    const { isDark } = useContext(AuthContext);
+
 
     const { _id, details, name, photo, price, rating, type, brand } = product;
 
@@ -43,7 +47,7 @@ const CartDetails = ({ product, productData, setProductData }) => {
 
     return (
         <div>
-            <div className="card bg-base-100 shadow-xl">
+            <div className={`card bg-base-100 shadow-xl ${isDark && "text-black"}`}>
                 <figure className="px-10 pt-10">
                     <img src={photo} alt="Shoes" className="h-48" />
                 </figure>

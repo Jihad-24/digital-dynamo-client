@@ -6,6 +6,7 @@ import Websites from "./Websites";
 
 const Home = () => {
 
+
     const loadedProducts = useLoaderData();
 
 
@@ -14,7 +15,7 @@ const Home = () => {
             <div className="mb-28 ">
                 <Banner></Banner>
             </div>
-            <div className="mb-24">
+            <div >
                 <h1 className="text-4xl font-semibold pb-10  text-center" >Our Brands</h1>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6" data-aos="fade-up">
                     {

@@ -1,9 +1,13 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../providers/AuthProvider";
 
 const BrandProductDetails = ({ product }) => {
+    const { isDark } = useContext(AuthContext);
+
 
     const { _id, details, name, photo, price, rating, type, brand } = product;
 
@@ -12,7 +16,7 @@ const BrandProductDetails = ({ product }) => {
             <div>
                 
             </div>
-            <div className="card md:h-[500px]  bg-base-100 shadow-xl">
+            <div className={`card md:h-[500px]  bg-base-100 shadow-xl ${isDark && "text-black"}`}>
                 <figure><img src={photo} alt="Shoes" className="h-48" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">Name: {name}</h2>

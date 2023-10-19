@@ -1,9 +1,12 @@
 import { useNavigate, useParams } from "react-router-dom";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useEffect } from "react";
 import Swal from "sweetalert2";
+import { AuthContext } from "../../providers/AuthProvider";
 
 const ProductDetails = () => {
+    const { isDark } = useContext(AuthContext);
+
 
     const [productDetail, setProductDetail] = useState([]);
     const { id } = useParams();
@@ -59,7 +62,7 @@ const ProductDetails = () => {
     return (
         <div>
             <div>
-                <div className="card  bg-base-100 shadow-xl">
+                <div className={`card  bg-base-100 shadow-xl ${isDark && "text-black"}`}>
                     <figure className="px-10 pt-10">
                         <img src={productDetail?.photo} alt="Shoes" className="rounded-xl h-72" />
                     </figure>

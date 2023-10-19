@@ -1,7 +1,11 @@
+import { useContext } from "react";
 import { useLoaderData, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+import { AuthContext } from "../../../providers/AuthProvider";
 
 const UpdateCart = () => {
+    const { isDark } = useContext(AuthContext);
+
     const loadedProduct = useLoaderData();
     const { _id, details, name, photo, price, rating, type, brand } = loadedProduct;
     const navigate = useNavigate();
@@ -47,13 +51,13 @@ const UpdateCart = () => {
 
     return (
         <div>
-            <div className='bg-[#F4F3F0] p-24'>
+            <div className={` p-24 ${isDark ? "":'bg-[#F4F3F0]'}`}>
                 <h1 className='text-center font-extrabold mb-10 text-purple-500 text-4xl'>Update Existing Product</h1>
-                <form onSubmit={handleUpdateProduct}>
+                <form onSubmit={handleUpdateProduct} className={`${isDark && "text-black"}`}>
                     <div className='md:flex gap-6 justify-center mb-8'>
                         <div className="form-control md:w-1/2">
                             <label className="label">
-                                <span className="label-text font-bold">Product Name</span>
+                                <span className={`label-text font-bold ${isDark && "text-white"}`}>Product Name</span>
                             </label>
                             <label className="input-group">
                                 <span className='font-medium'>Name</span>
@@ -62,7 +66,7 @@ const UpdateCart = () => {
                         </div>
                         <div className="form-control md:w-1/2">
                             <label className="label">
-                                <span className="label-text font-bold">Brand Name</span>
+                                <span className={`label-text font-bold ${isDark && "text-white"}`}>Brand Name</span>
                             </label>
                             <label className="input-group">
                                 <span className='font-medium'>Brand</span>
@@ -73,7 +77,7 @@ const UpdateCart = () => {
                     <div className='md:flex gap-6 justify-center mb-8'>
                         <div className="form-control md:w-1/2">
                             <label className="label">
-                                <span className="label-text font-bold">Product Type</span>
+                                <span className={`label-text font-bold ${isDark && "text-white"}`}>Product Type</span>
                             </label>
                             <label className="input-group">
                                 <span className='font-medium'>Type</span>
@@ -82,7 +86,7 @@ const UpdateCart = () => {
                         </div>
                         <div className="form-control md:w-1/2">
                             <label className="label">
-                                <span className="label-text font-bold">Product Rating</span>
+                                <span className={`label-text font-bold ${isDark && "text-white"}`}>Product Rating</span>
                             </label>
                             <label className="input-group">
                                 <span className='font-medium'>Rating</span>
@@ -93,7 +97,7 @@ const UpdateCart = () => {
                     <div className='md:flex gap-6 justify-center mb-8'>
                         <div className="form-control md:w-1/2">
                             <label className="label">
-                                <span className="label-text font-bold">Product Price</span>
+                                <span className={`label-text font-bold ${isDark && "text-white"}`}>Product Price</span>
                             </label>
                             <label className="input-group">
                                 <span className='font-medium'>Price</span>
@@ -102,7 +106,7 @@ const UpdateCart = () => {
                         </div>
                         <div className="form-control md:w-1/2">
                             <label className="label">
-                                <span className="label-text font-bold">Product Details</span>
+                                <span className={`label-text font-bold ${isDark && "text-white"}`}>Product Details</span>
                             </label>
                             <label className="input-group">
                                 <span className='font-medium'>Details</span>
@@ -115,7 +119,7 @@ const UpdateCart = () => {
                     <div className='mb-8'>
                         <div className="form-control w-full">
                             <label className="label">
-                                <span className="label-text font-bold">Product Photo URL</span>
+                                <span className={`label-text font-bold ${isDark && "text-white"}`}>Product Photo URL</span>
                             </label>
                             <label className="input-group">
                                 <span className='font-medium'>Photo</span>
