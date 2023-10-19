@@ -1,6 +1,6 @@
 import Banner from "./Banner";
 import Brands from "./Brands";
-import ContactUs from "./ContactUs";
+import StartToday from "./StartToday";
 import Websites from "./Websites";
 import { useEffect } from "react";
 import { useState } from "react";
@@ -16,9 +16,9 @@ const Home = () => {
                 setLoadedProducts(data);
             })
             .catch(error => {
-            console.log(error.message);
-        })
-    },[])
+                console.log(error.message);
+            })
+    }, [])
 
 
     return (
@@ -39,8 +39,13 @@ const Home = () => {
                 </div>
             </div>
             <div className="my-20">
+                <div className="" data-aos="fade-left">
+                    <h1 className="text-4xl font-bold pb-14">Start From Today <br /> and <span className="italic text-[#263077]"> Buy Your <br /> Products</span> <br />
+                        <span className="border-b-8 border-[#263077] pt-4  w-16 h-2 absolute"></span>
+                    </h1>
+                </div>
                 <div className="mb-20">
-                    <ContactUs></ContactUs>
+                    <StartToday></StartToday>
                 </div>
                 <div>
                     <h1 className="font-extrabold text-5xl text-center pb-14">Find us on the <span className="text-[#263077] italic">Business Listing Websites</span>

@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 
-const ContactUs = () => {
+const StartToday = () => {
     return (
         <div>
             <div className="hero ">
@@ -13,8 +13,8 @@ const ContactUs = () => {
                         <div className='flex gap-3 mb-10 md:mb-3 lg:mb-11'>
                             <img className='w-16 h-16' src="https://i.ibb.co/vq308fn/bill-mobile-payment.png" alt="" />
                             <div className="">
-                                <h1 className="text-2xl font-bold">Billing starts after 60 days</h1>
-                                <p className="">On registering, you get the white labeled Clinic website and android app launched within 24 hours. You need to pay at the end of your third month.</p>
+                                <h1 className="text-2xl font-bold">Billing starts after buying</h1>
+                                <p className="">On buying, you get the to cheak the product and  You need to pay after your cheak is done.</p>
                             </div>
                         </div>
                         <div className='flex gap-3  mb-10 md:mb-3 lg:mb-11'>
@@ -27,15 +27,15 @@ const ContactUs = () => {
                         <div className='flex gap-3  mb-10 md:mb-3 lg:mb-11'>
                             <img className='w-16 h-16' src="https://i.ibb.co/pWYYvLN/last-icn-3.jpg" alt="" />
                             <div className="">
-                                <h1 className="text-2xl font-bold">Free Cancellation within 60 days</h1>
-                                <p className="">You can cancel your subscription within 60 days and you won’t be charged anything.</p>
+                                <h1 className="text-2xl font-bold">Free Cancellation within 24 hours</h1>
+                                <p className="">You can cancel your order within 24 hours and you won’t be charged anything.</p>
                             </div>
                         </div>
                         <div className='flex gap-3 mb-10 md:mb-3 lg:mb-11'>
                             <img className='w-16 h-16' src="https://i.ibb.co/3CbnvX8/last-icn-4.jpg" alt="" />
                             <div className="">
                                 <h1 className="text-2xl font-bold">Secure & HIPAA Compliant</h1>
-                                <p className="">Code Corner follows the industry’s best security standards and we are HIPAA compliant. Rest assured, your data is safe</p>
+                                <p className="">DigitalDynamo follows the industry’s best security standards and we are HIPAA compliant. Rest assured, your data is safe</p>
                             </div>
                         </div>
                     </div>
@@ -45,4 +45,4 @@ const ContactUs = () => {
     );
 };
 
-export default ContactUs;
+export default StartToday;

@@ -1,6 +1,6 @@
-# Code Corner
+# DigitalDynamo
 
-Click here for the live page: [https://code-corner-j.netlify.app/]
+Click here for the live page: []
 
 Here are at least five bullet points mentioning different features and functionalities of my website:
 
@@ -8,7 +8,7 @@ Here are at least five bullet points mentioning different features and functiona
    - My website supports user authentication through email and password, as well as Google Sign-In. Users can create accounts, log in, and log out.
 
 # 2. Navigation and Routing:
-   - The website uses React Router for navigation and routing. It defines routes for different pages, such as the home page, login page, register page, user profile, and more.
+   - The website uses React Router for navigation and routing. It defines routes for different pages, such as the home page, login page, register page, add product, my cart and more.
 
 # 3. Password Visibility Toggle:
    - In the login and registration forms, there is an option for users to toggle the visibility of the password by clicking the eye icon, allowing them to see the password they are entering.
@@ -17,6 +17,6 @@ Here are at least five bullet points mentioning different features and functiona
    - The website handles errors during the login and registration processes and displays error messages to the user. It also provides success alerts using the Swal (SweetAlert2) library.
 
 # 5. Navigation Bar (Navbar):
-   - The website includes a navigation bar that displays links to different pages based on the user's authentication status. It provides links for Home, Login, Register, User Profile, and Our Team. It also displays the user's name and profile picture when logged in and provides a "Sign Out" button for logging out.
+   - The website includes a navigation bar that displays links to different pages based on the user's authentication status. It provides links for Home, Login, Register, add product, and  my cart. It also displays the user's name and profile picture when logged in and provides a "Sign Out" button for logging out.
 
 These are the key features and functionalities of my website.
