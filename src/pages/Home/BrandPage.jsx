@@ -7,8 +7,6 @@ import { AuthContext } from "../../providers/AuthProvider";
 
 const BrandPage = () => {
     const { isDark } = useContext(AuthContext);
-
-
     const { brandName } = useParams();
     const [brandProducts, setBrandProducts] = useState([]);
     const [slides, setSlides] = useState([]);
@@ -19,11 +17,11 @@ const BrandPage = () => {
         fetch('https://digital-dynamo-j.vercel.app/product')
             .then(res => res.json())
             .then(data => {
-                console.log(data)
+                // console.log(data)
                 const filterProducts = data.filter((product) => product.brand === brandName);
-                console.log(filterProducts)
-                setBrandProducts(filterProducts)
-                setIsLoading(false)
+                // console.log(filterProducts)
+                setBrandProducts(filterProducts);
+                setIsLoading(false);
             })
     }, [brandName])
 
@@ -33,8 +31,8 @@ const BrandPage = () => {
         fetch('https://digital-dynamo-j.vercel.app/brands')
             .then(res => res.json())
             .then(data => {
-                console.log(data)
-                setSlides(data?.find(item => item.brand === brandName))
+                // console.log(data)
+                setSlides(data?.find(item => item.brand === brandName));
             })
     }, [brandName])
 
@@ -86,19 +84,6 @@ const BrandPage = () => {
                                 </div>
                         )
                 }
-                {/* {
-                    brandProducts.length > 0 ?
-                        brandProducts?.map((product) =>
-                            <BrandProductDetails product={product} key={product._id} />
-                        )
-                        :
-                        <div className="text-center mx-auto md:w-[700px] lg:w-[1100px]">
-                            <h1 className="font-bold loading-10  text-3xl">
-                                <span className="font-extrabold text-red-600"> Oops, </span> <br />
-                                it seems like there are currently no products <br /> available for this brand. Please check back <br /> later for updates or explore our other  <br />  brands and products.
-                            </h1>
-                        </div>
-                } */}
 
             </div>
         </div>

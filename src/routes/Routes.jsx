@@ -19,7 +19,6 @@ const routes = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch('https://digital-dynamo-j.vercel.app/brands')
       },
       {
         path: '/brands/:brandName',
@@ -42,7 +41,6 @@ const routes = createBrowserRouter([
       {
         path: "/cart",
         element: <MyCart></MyCart>,
-        loader: () => fetch('https://digital-dynamo-j.vercel.app/mycart')
       },
       {
         path: "*",

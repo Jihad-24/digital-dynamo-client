@@ -1,17 +1,27 @@
 import CartDetails from "./CartDetails";
-import { useLoaderData } from "react-router-dom";
 import { useState } from "react";
+import { useEffect } from "react";
 
 const MyCart = () => {
-    const loadedProduct = useLoaderData();
-    const [productData, setProductData] = useState(loadedProduct)
+    const [productData, setProductData] = useState([])
+
+    useEffect(() => {
+        fetch('https://digital-dynamo-j.vercel.app/mycart')
+            .then(res => res.json())
+            .then(data => {
+                setProductData(data);
+            })
+            .catch(error => {
+                console.log(error.message);
+            })
+    }, [])
 
 
     return (
         <div>
             <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:mx-10 md:my-6">
                 {
-                    productData.length > 0 ?
+                    productData ?
                         productData?.map(product => <CartDetails
                             key={product._id}
                             product={product}

@@ -1,13 +1,24 @@
-import { useLoaderData } from "react-router-dom";
 import Banner from "./Banner";
 import Brands from "./Brands";
 import ContactUs from "./ContactUs";
 import Websites from "./Websites";
+import { useEffect } from "react";
+import { useState } from "react";
 
 const Home = () => {
 
+    const [loadedProducts, setLoadedProducts] = useState([]);
 
-    const loadedProducts = useLoaderData();
+    useEffect(() => {
+        fetch('https://digital-dynamo-j.vercel.app/brands')
+            .then(res => res.json())
+            .then(data => {
+                setLoadedProducts(data);
+            })
+            .catch(error => {
+            console.log(error.message);
+        })
+    },[])
 
 
     return (
