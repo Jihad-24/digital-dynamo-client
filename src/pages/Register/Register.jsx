@@ -19,9 +19,9 @@ const Register = () => {
 
     const handleRegister = e => {
         e.preventDefault();
-        console.log(e.currentTarget);
+        // console.log(e.currentTarget);
         const form = e.target;
-        const terms = form.querySelector('input[name="terms"]');
+        const terms = form.terms.checked;
         const name = form.name.value;
         const email = form.email.value;
         const password = form.password.value;
