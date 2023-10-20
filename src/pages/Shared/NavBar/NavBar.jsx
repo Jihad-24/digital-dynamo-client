@@ -3,6 +3,8 @@ import { useContext } from "react";
 import { AuthContext } from "../../../providers/AuthProvider";
 import icon from "../../../assets/react.svg"
 import Swal from "sweetalert2";
+import { BsFillMoonStarsFill , BsFillSunFill} from 'react-icons/bs';
+
 
 const NavBar = () => {
 
@@ -72,7 +74,7 @@ const NavBar = () => {
                     </ul>
                 </div>
                 <div>
-                    <div onClick={handleTheam} className="btn">{isDark ? "light" : "dark"}</div>
+                    <div onClick={handleTheam} className="btn">{isDark ? <BsFillSunFill/> : <BsFillMoonStarsFill/>}</div>
                 </div>
                 <div className="navbar-end">
                     <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
