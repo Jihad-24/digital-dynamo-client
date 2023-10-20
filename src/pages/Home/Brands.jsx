@@ -11,7 +11,7 @@ const Brands = ({ product }) => {
     return (
         <div>
             <Link to={`/brands/${brand}`} product={product}>
-            <div className={`card h-52 bg-base-100 shadow-xl ${isDark && "text-black"}`}>
+            <div className={`card h-52 bg-base-100 shadow-xl ${isDark && "text-black"}`} data-aos="fade-up">
                 <figure className="px-10 pt-10">
                     <img src={image} alt="Shoes" className="rounded-xl w-1/3" />
                 </figure>

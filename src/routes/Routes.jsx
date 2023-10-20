@@ -21,7 +21,7 @@ const routes = createBrowserRouter([
         element: <Home></Home>,
       },
       {
-        path: '/brands/:brandName',
+        path: '/brands/:brand',
         element: <PrivateRoute><BrandPage></BrandPage></PrivateRoute>,
         loader: ({ params }) => fetch(` https://digital-dynamo-j.vercel.app/brands/${params.brand}`)
       },

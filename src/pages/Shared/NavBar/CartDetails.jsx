@@ -44,18 +44,18 @@ const CartDetails = ({ product, productData, setProductData }) => {
 
     return (
         <div>
-            <div className={`card bg-base-100 shadow-xl ${isDark && "text-black"}`}>
+            <div className={`card bg-base-100 shadow-xl ${isDark && "text-black"}`} data-aos="fade-up">
                 <figure className="px-10 pt-10">
-                    <img src={photo} alt="Shoes" className="h-48" />
+                    <img src={photo} alt="Shoes" className="h-48" data-aos="fade-down"/>
                 </figure>
                 <div className="card-body items-center text-center">
-                    <h2 className="card-title">Name : {name}</h2>
-                    <p className="font-bold text-orange-500">Brand : {brand}</p>
-                    <p className="font-medium">Type : {type}</p>
-                    <p className="font-medium text-orange-400">Rating : {rating}</p>
-                    <p className="font-bold btn">Price : ${price}</p>
+                    <h2 className="card-title" data-aos="fade-left">Name : {name}</h2>
+                    <p className="font-bold text-orange-500" data-aos="fade-right">Brand : {brand}</p>
+                    <p className="font-medium" data-aos="fade-left">Type : {type}</p>
+                    <p className="font-medium text-orange-400" data-aos="fade-right">Rating : {rating}</p>
+                    <p className="font-bold btn" data-aos="fade-left">Price : ${price}</p>
                     <div className="card-actions justify-center">
-                        <button onClick={() => handleDelete(_id)} className="btn btn-primary">Delete Product</button>
+                        <button onClick={() => handleDelete(_id)} className="btn btn-primary"data-aos="fade-up">Delete Product</button>
                     </div>
                 </div>
             </div>

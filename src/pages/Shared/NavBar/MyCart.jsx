@@ -31,7 +31,7 @@ const MyCart = () => {
                         :
                         <div className="text-center mx-auto md:w-[700px] lg:w-[1100px]">
                             <h1 className="font-bold loading-10  text-3xl">
-                                <span className="font-extrabold text-red-600"> Oops, </span> <br />
+                                <span className="font-extrabold text-red-600" data-aos="fade-down"> Oops, </span> <br />
                                 it seems like there are currently no <br /> products has been added. Please <br /> add products to see them.
                             </h1>
                         </div>

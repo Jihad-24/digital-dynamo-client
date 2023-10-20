@@ -2,7 +2,7 @@
 
 Click here for the live page: []
 
-Here are at least five bullet points mentioning different features and functionalities of my website:
+Here are at least five or more bullet points mentioning different features and functionalities of my website:
 
 # 1. User Authentication:
    - My website supports user authentication through email and password, as well as Google Sign-In. Users can create accounts, log in, and log out.

@@ -27,8 +27,8 @@ const Home = () => {
                 <Banner></Banner>
             </div>
             <div >
-                <h1 className="text-4xl font-semibold pb-10  text-center" >Our Brands</h1>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6" data-aos="fade-up">
+                <h1 className="text-4xl font-semibold pb-10  text-center " data-aos="fade-down">Our Brands</h1>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6" >
                     {
                         loadedProducts?.map(product => <Brands
                             product={product}
@@ -48,10 +48,10 @@ const Home = () => {
                     <StartToday></StartToday>
                 </div>
                 <div>
-                    <h1 className="font-extrabold text-5xl text-center pb-14">Find us on the <span className="text-[#263077] italic">Business Listing Websites</span>
+                    <h1 className="font-extrabold text-5xl text-center pb-14">Find us on the <span className="text-[#263077] italic" data-aos="fade-down">Business Listing Websites</span>
                         <br />
-                        <span className="border-b-8 border-[#263077] pt-6  w-20 h-2 absolute"></span></h1>
-                    <p className="font-normal text-[#3F3F3F] text-center text-xl">We are committed to making it as convenient as possible for you to find and engage with our brand. Our presence on these business listing websites will help you connect with us in a variety of ways. Here are some of the platforms where you can find us:</p>
+                        <span className="border-b-8 border-[#263077] pt-6  w-20 h-2 absolute" data-aos="fade-down"></span></h1>
+                    <p className="font-normal text-[#3F3F3F] text-center text-xl" data-aos="fade-down">We are committed to making it as convenient as possible for you to find and engage with our brand. Our presence on these business listing websites will help you connect with us in a variety of ways. Here are some of the platforms where you can find us:</p>
                     <div>
                         <Websites></Websites>
                     </div>
