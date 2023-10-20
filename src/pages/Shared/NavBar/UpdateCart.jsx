@@ -26,7 +26,7 @@ const UpdateCart = () => {
         console.log(updatdProduct);
 
         // send data to the server
-        fetch(` https://digital-dynamo-j.vercel.app/product/${_id}`, {
+        fetch(` https://digital-dynamo-jihad-24.vercel.app/product/${_id}`, {
             method: "PUT",
             headers: {
                 'content-type': 'application/json'
@@ -51,7 +51,7 @@ const UpdateCart = () => {
 
     return (
         <div>
-            <div className={` p-24 ${isDark ? "":'bg-[#F4F3F0]'}`}>
+            <div className={` p-24 ${isDark ? "" : 'bg-[#F4F3F0]'}`}>
                 <h1 className='text-center font-extrabold mb-10 text-purple-500 text-4xl'>Update Existing Product</h1>
                 <form onSubmit={handleUpdateProduct} className={`${isDark && "text-black"}`}>
                     <div className='md:flex gap-6 justify-center mb-8'>

@@ -10,7 +10,7 @@ const Home = () => {
     const [loadedProducts, setLoadedProducts] = useState([]);
 
     useEffect(() => {
-        fetch('https://digital-dynamo-j.vercel.app/brands')
+        fetch('https://digital-dynamo-jihad-24.vercel.app/brands')
             .then(res => res.json())
             .then(data => {
                 setLoadedProducts(data);

@@ -6,7 +6,7 @@ const MyCart = () => {
     const [productData, setProductData] = useState([])
 
     useEffect(() => {
-        fetch('https://digital-dynamo-j.vercel.app/mycart')
+        fetch('https://digital-dynamo-jihad-24.vercel.app/mycart')
             .then(res => res.json())
             .then(data => {
                 setProductData(data);

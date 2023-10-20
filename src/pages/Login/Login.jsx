@@ -53,7 +53,7 @@ const Login = () => {
                 const displayName = result?.user?.displayName;
                 const user = { email, displayName }
 
-                fetch('https://digital-dynamo-j.vercel.app/user', {
+                fetch('https://digital-dynamo-jihad-24.vercel.app/user', {
                     method: "POST",
                     headers: {
                         'content-type': 'application/json'
@@ -92,7 +92,7 @@ const Login = () => {
                 <h1 className="text-4xl mt-10 font-bold text-center" data-aos="fade-down">Login your account!</h1>
                 <form
                     onSubmit={handleLogin}
-                    
+
                     className={`card-body md:w-3/4 lg:w-1/2 mx-auto ${isDark && "text-black"}`}>
                     {
                         loginError && <p className="text-red-700">{loginError}</p>

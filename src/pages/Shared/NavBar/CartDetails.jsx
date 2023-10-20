@@ -22,7 +22,7 @@ const CartDetails = ({ product, productData, setProductData }) => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result?.isConfirmed) {
-                fetch(`https://digital-dynamo-j.vercel.app/mycart/${id}`, {
+                fetch(`https://digital-dynamo-jihad-24.vercel.app/mycart/${id}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())
@@ -46,7 +46,7 @@ const CartDetails = ({ product, productData, setProductData }) => {
         <div>
             <div className={`card bg-base-100 shadow-xl ${isDark && "text-black"}`} data-aos="fade-up">
                 <figure className="px-10 pt-10">
-                    <img src={photo} alt="Shoes" className="h-48" data-aos="fade-down"/>
+                    <img src={photo} alt="Shoes" className="h-48" data-aos="fade-down" />
                 </figure>
                 <div className="card-body items-center text-center">
                     <h2 className="card-title" data-aos="fade-left">Name : {name}</h2>
@@ -55,7 +55,7 @@ const CartDetails = ({ product, productData, setProductData }) => {
                     <p className="font-medium text-orange-400" data-aos="fade-right">Rating : {rating}</p>
                     <p className="font-bold btn" data-aos="fade-left">Price : ${price}</p>
                     <div className="card-actions justify-center">
-                        <button onClick={() => handleDelete(_id)} className="btn btn-primary"data-aos="fade-up">Delete Product</button>
+                        <button onClick={() => handleDelete(_id)} className="btn btn-primary" data-aos="fade-up">Delete Product</button>
                     </div>
                 </div>
             </div>

@@ -21,7 +21,7 @@ const AddToCart = () => {
         console.log(newProduct);
 
         // send data to the server
-        fetch(' https://digital-dynamo-j.vercel.app/mycart', {
+        fetch(' https://digital-dynamo-jihad-24.vercel.app/mycart', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'
@@ -45,7 +45,7 @@ const AddToCart = () => {
     }
     return (
         <div>
-            <div className={` p-24 ${isDark ? "":'bg-[#F4F3F0]'}`}>
+            <div className={` p-24 ${isDark ? "" : 'bg-[#F4F3F0]'}`}>
                 <h1 className='text-center font-extrabold mb-10 text-purple-500 text-4xl'>Add Product</h1>
                 <form onSubmit={handleAddProduct} className={`${isDark && "text-black"}`}>
                     <div className='md:flex gap-6 justify-center mb-8'>

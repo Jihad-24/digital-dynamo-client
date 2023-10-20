@@ -14,7 +14,7 @@ const BrandPage = () => {
 
     useEffect(() => {
         setIsLoading(true)
-        fetch('https://digital-dynamo-j.vercel.app/product')
+        fetch('https://digital-dynamo-jihad-24.vercel.app/product')
             .then(res => res.json())
             .then(data => {
                 // console.log(data)
@@ -28,30 +28,13 @@ const BrandPage = () => {
 
     useEffect(() => {
 
-        fetch('https://digital-dynamo-j.vercel.app/brands')
+        fetch('https://digital-dynamo-jihad-24.vercel.app/brands')
             .then(res => res.json())
             .then(data => {
                 // console.log(data)
                 setSlides(data?.find(item => item.brand === brandName));
             })
     }, [brandName])
-
-    // useEffect(() => {
-    //     fetch(`https://digital-dynamo-j.vercel.app/brands/${brandName}`)
-    //       .then((res) => {
-    //         if (!res.ok) {
-    //           throw new Error('Network response was not ok');
-    //         }
-    //         return res.json();
-    //       })
-    //       .then((data) => {
-    //         console.log(data);
-    //       })
-    //       .catch((error) => {
-    //         console.error('Error:', error);
-    //       });
-    //   }, [brandName]);
-      
 
 
     return (

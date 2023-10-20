@@ -21,14 +21,14 @@ const routes = createBrowserRouter([
         element: <Home></Home>,
       },
       {
-        path: '/brands/:brand',
+        path: '/brands/:brandName',
         element: <PrivateRoute><BrandPage></BrandPage></PrivateRoute>,
-        loader: ({ params }) => fetch(` https://digital-dynamo-j.vercel.app/brands/${params.brand}`)
+        loader: ({ params }) => fetch(` https://digital-dynamo-jihad-24.vercel.app/brands/${params.brand}`)
       },
       {
         path: '/updatecart/:id',
         element: <UpdateCart></UpdateCart>,
-        loader: ({ params }) => fetch(` https://digital-dynamo-j.vercel.app/product/${params.id}`)
+        loader: ({ params }) => fetch(` https://digital-dynamo-jihad-24.vercel.app/product/${params.id}`)
       },
       {
         path: "/productdetails/:id",

@@ -8,7 +8,7 @@ import NavBar from "../Shared/NavBar/NavBar";
 
 const Register = () => {
 
-    const {isDark, createUser, signInGoogle } = useContext(AuthContext);
+    const { isDark, createUser, signInGoogle } = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
 
@@ -52,7 +52,7 @@ const Register = () => {
                 console.log(result.user);
                 setSuccess('User Created Successfully')
                 const user = { name, email, password };
-                fetch('https://digital-dynamo-j.vercel.app/user', {
+                fetch('https://digital-dynamo-jihad-24.vercel.app/user', {
                     method: "POST",
                     headers: {
                         'content-type': 'application/json'
@@ -92,7 +92,7 @@ const Register = () => {
                 const displayName = result?.user?.displayName;
                 const user = { email, displayName }
 
-                fetch('https://digital-dynamo-j.vercel.app/user', {
+                fetch('https://digital-dynamo-jihad-24.vercel.app/user', {
                     method: "POST",
                     headers: {
                         'content-type': 'application/json'
@@ -132,7 +132,7 @@ const Register = () => {
                 <form
                     onSubmit={handleRegister}
                     className={`card-body md:w-3/4 lg:w-1/2 mx-auto ${isDark && "text-black"}`}
-                    >
+                >
                     {
                         registerError && <p className="text-red-700">{registerError}</p>
                     }

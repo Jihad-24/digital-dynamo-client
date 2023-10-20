@@ -13,7 +13,7 @@ const ProductDetails = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch('https://digital-dynamo-j.vercel.app/product')
+        fetch('https://digital-dynamo-jihad-24.vercel.app/product')
             .then(res => res.json())
             .then(data => {
                 setProductDetail(data.find((item) => item._id === id));
@@ -35,7 +35,7 @@ const ProductDetails = () => {
             photo: productDetail?.photo,
         }
 
-        fetch('https://digital-dynamo-j.vercel.app/mycart', {
+        fetch('https://digital-dynamo-jihad-24.vercel.app/mycart', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'
