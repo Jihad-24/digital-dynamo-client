@@ -16,7 +16,7 @@ const BrandProductDetails = ({ product }) => {
             <div>
                 
             </div>
-            <div className={`card md:h-[500px]  bg-base-100 shadow-xl ${isDark && "text-black"}`} data-aos="fade-up">
+            <div className={`card md:h-[500px]  ${isDark ? "bg-black text-white border":"bg-base-100 text-black "} shadow-xl`} data-aos="fade-up">
                 <figure><img src={photo} alt="Shoes" className="h-48" data-aos="fade-down-right" /></figure>
                 <div className="card-body">
                     <h2 className="card-title" data-aos="fade-left">Name: {name}</h2>

@@ -62,7 +62,7 @@ const ProductDetails = () => {
     return (
         <div>
             <div>
-                <div className={`card  bg-base-100 shadow-xl ${isDark && "text-black"}`}>
+                <div className={`card shadow-xl ${isDark ? "bg-black text-white border":"bg-base-100 text-black"}`}>
                     <figure className="px-10 pt-10">
                         <img src={productDetail?.photo} alt="Shoes" className="rounded-xl h-72" />
                     </figure>
