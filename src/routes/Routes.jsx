@@ -10,7 +10,6 @@ import MyCart from "../pages/Shared/NavBar/MyCart";
 import BrandPage from "../pages/Home/BrandPage";
 import UpdateCart from "../pages/Shared/NavBar/UpdateCart";
 import ProductDetails from "../pages/Home/ProductDetails";
-import BrandProductDetails from "../pages/Home/BrandProductDetails";
 
 const routes = createBrowserRouter([
   {
