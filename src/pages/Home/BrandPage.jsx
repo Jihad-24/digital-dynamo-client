@@ -71,7 +71,7 @@ const BrandPage = () => {
                         <div>Loading...</div>
                         :
                         (
-                            brandProducts.length > 0 ?
+                            brandProducts.length ?
                                 brandProducts?.map((product) =>
                                     <BrandProductDetails product={product} key={product._id} />
                                 )
