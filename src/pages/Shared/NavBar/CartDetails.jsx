@@ -44,7 +44,7 @@ const CartDetails = ({ product, productData, setProductData }) => {
 
     return (
         <div>
-            <div className={`card shadow-xl ${isDark ? "bg-black text-white border":"bg-base-100 text-black"}`} data-aos="fade-up">
+            <div className={`card shadow-xl ${isDark ? "bg-black text-white border" : "bg-base-100 text-black"}`} data-aos="fade-up">
                 <figure className="px-10 pt-10">
                     <img src={photo} alt="Shoes" className="h-48" data-aos="fade-down" />
                 </figure>

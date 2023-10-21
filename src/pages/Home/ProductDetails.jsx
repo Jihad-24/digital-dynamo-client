@@ -5,7 +5,8 @@ import Swal from "sweetalert2";
 import { AuthContext } from "../../providers/AuthProvider";
 
 const ProductDetails = () => {
-    const { isDark } = useContext(AuthContext);
+    const { isDark, user } = useContext(AuthContext);
+    const userEmail = user.email;
 
 
     const [productDetail, setProductDetail] = useState([]);
@@ -26,6 +27,7 @@ const ProductDetails = () => {
     const handleaddCart = (e) => {
         e.preventDefault();
         const productData = {
+            userEmail,
             name: productDetail?.name,
             type: productDetail?.type,
             brand: productDetail?.brand,
@@ -62,7 +64,7 @@ const ProductDetails = () => {
     return (
         <div>
             <div>
-                <div className={`card shadow-xl ${isDark ? "bg-black text-white border":"bg-base-100 text-black"}`}>
+                <div className={`card shadow-xl ${isDark ? "bg-black text-white border" : "bg-base-100 text-black"}`}>
                     <figure className="px-10 pt-10">
                         <img src={productDetail?.photo} alt="Shoes" className="rounded-xl h-72" />
                     </figure>

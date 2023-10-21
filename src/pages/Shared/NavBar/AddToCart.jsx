@@ -3,7 +3,9 @@ import Swal from "sweetalert2";
 import { AuthContext } from "../../../providers/AuthProvider";
 
 const AddToCart = () => {
-    const { isDark } = useContext(AuthContext);
+    const { isDark, user } = useContext(AuthContext);
+    const userEmail = user.email;
+
 
 
     const handleAddProduct = event => {
@@ -17,7 +19,7 @@ const AddToCart = () => {
         const details = form.details.value;
         const photo = form.photo.value;
 
-        const newProduct = { name, brand, price, type, rating, details, photo }
+        const newProduct = { userEmail, name, brand, price, type, rating, details, photo }
         console.log(newProduct);
 
         // send data to the server

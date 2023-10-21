@@ -1,27 +1,32 @@
 import CartDetails from "./CartDetails";
+import { useContext } from "react";
 import { useState } from "react";
 import { useEffect } from "react";
+import { AuthContext } from "../../../providers/AuthProvider";
 
 const MyCart = () => {
+    const { user } = useContext(AuthContext);
+    const userEmail = user.email;
     const [productData, setProductData] = useState([])
 
     useEffect(() => {
-        fetch('https://digital-dynamo-jihad-24.vercel.app/mycart')
+        fetch(`https://digital-dynamo-jihad-24.vercel.app/mycart`)
             .then(res => res.json())
             .then(data => {
-                setProductData(data);
+                const myCart = data.filter(item => item.userEmail === userEmail)
+                setProductData(myCart);
             })
             .catch(error => {
                 console.log(error.message);
             })
-    }, [])
+    }, [userEmail])
 
 
     return (
         <div>
             <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:mx-10 md:my-6">
                 {
-                    productData ?
+                    productData.length ?
                         productData?.map(product => <CartDetails
                             key={product._id}
                             product={product}
