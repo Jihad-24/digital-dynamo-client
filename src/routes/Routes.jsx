@@ -10,6 +10,7 @@ import MyCart from "../pages/Shared/NavBar/MyCart";
 import BrandPage from "../pages/Home/BrandPage";
 import UpdateCart from "../pages/Shared/NavBar/UpdateCart";
 import ProductDetails from "../pages/Home/ProductDetails";
+import BrandProductDetails from "../pages/Home/BrandProductDetails";
 
 const routes = createBrowserRouter([
   {
@@ -27,20 +28,20 @@ const routes = createBrowserRouter([
       },
       {
         path: '/updatecart/:id',
-        element: <UpdateCart></UpdateCart>,
+        element: <PrivateRoute><UpdateCart></UpdateCart></PrivateRoute>,
         loader: ({ params }) => fetch(` https://digital-dynamo-jihad-24.vercel.app/product/${params.id}`)
       },
       {
         path: "/productdetails/:id",
-        element: <ProductDetails></ProductDetails>,
+        element: <PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>,
       },
       {
         path: '/addtocart',
-        element: <AddToCart></AddToCart>,
+        element: <PrivateRoute><AddToCart></AddToCart></PrivateRoute>,
       },
       {
         path: "/cart",
-        element: <MyCart></MyCart>,
+        element: <PrivateRoute><MyCart></MyCart></PrivateRoute>,
       },
       {
         path: "*",
